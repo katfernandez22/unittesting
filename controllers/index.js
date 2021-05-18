@@ -1,4 +1,5 @@
 const User = require('../models/user');
+
 const createUser = async (req, res) => {
     try {
         const user = await new User(req.body)
@@ -8,6 +9,7 @@ const createUser = async (req, res) => {
         return res.status(500).json({ error: error.message })
     }
 }
+
 const getAllUsers = async (req, res) => {
     try {
         const users = await User.find()
@@ -16,6 +18,7 @@ const getAllUsers = async (req, res) => {
         return res.status(500).send(error.message);
     }
 }
+
 const getUserById = async (req, res) => {
     try {
         const { id } = req.params;
@@ -28,6 +31,7 @@ const getUserById = async (req, res) => {
         return res.status(500).send(error.message);
     }
 }
+
 const updateUser = async (req, res) => {
     try {
         const { id } = req.params;
@@ -44,6 +48,7 @@ const updateUser = async (req, res) => {
         return res.status(500).send(error.message);
     }
 }
+
 const deleteUser = async (req, res) => {
     try {
         const { id } = req.params;
@@ -56,6 +61,7 @@ const deleteUser = async (req, res) => {
         return res.status(500).send(error.message);
     }
 }
+
 module.exports = {
     createUser,
     getAllUsers,

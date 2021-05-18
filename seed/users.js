@@ -22,11 +22,7 @@ const main = async () => {
                 {
                     title: faker.lorem.sentence(),
                     link: faker.internet.url()
-                },
-                {
-                    title: faker.lorem.sentence(),
-                    link: faker.internet.url()
-                },
+                }
             ]
         }
     ))
@@ -38,3 +34,5 @@ const run = async () => {
     await main()
     db.close()
 }
+
+run()
