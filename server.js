@@ -1,7 +1,7 @@
 const app = require('./app.js')
 const db = require('./db')
 
-const PORT = process.env.PORT || 3500
+const PORT = process.env.PORT || 3100
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
